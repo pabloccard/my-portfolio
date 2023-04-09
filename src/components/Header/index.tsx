@@ -1,21 +1,54 @@
 import Image from 'next/image'
-import logo from '../../assets/logo.svg'
-import { FaGithub } from 'react-icons/fa'
-import { HeaderContainer, NavBar, CurriculumButton } from './styles'
+import logo from '../../assets/logo9.png'
+import { AiFillLinkedin } from 'react-icons/ai'
+
+import * as S from './styles'
+import { Menu } from '../Menu'
 
 export const Header = () => {
   return (
-    <HeaderContainer>
+    <S.Container>
       <Image src={logo} alt="logo" height={50} />
-      <NavBar>
+
+      <S.NavBar>
         <a href="">Home</a>
         <a href="">Sobre mim</a>
         <a href="">Projetos</a>
         <a href="">Contato</a>
-      </NavBar>
-      <CurriculumButton>
-        Github <FaGithub />{' '}
-      </CurriculumButton>
-    </HeaderContainer>
+      </S.NavBar>
+
+      <S.CurriculumButton>
+        <AiFillLinkedin />
+        LinkedIn
+      </S.CurriculumButton>
+
+      <Menu />
+    </S.Container>
   )
 }
+
+/* <S.HeaderContainer>
+      
+      <S.Menu>
+        <S.MenuButton>
+          <input type="checkbox" id="checkbox" />
+          <label htmlFor="checkbox">
+            <span>
+              <HiMenuAlt3 />
+            </span>
+          </label>
+        </S.MenuButton>
+
+        <S.NavBar>
+        <a href="">Home</a>
+        <a href="">Sobre mim</a>
+        <a href="">Projetos</a>
+        <a href="">Contato</a>
+      </S.NavBar>
+
+      <S.CurriculumButton>
+        <AiFillLinkedin />
+        LinkedIn
+      </S.CurriculumButton>
+      </S.Menu>
+    </S.HeaderContainer> */

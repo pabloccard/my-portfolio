@@ -8,76 +8,61 @@ export const Container = styled.div`
 export const Content = styled.section`
   margin: 0 auto;
   max-width: 1120px;
-  padding: 6rem 1.5rem;
+  padding: 6rem 2rem;
 
   > h3 {
-    color: ${(props) => props.theme.ter};
+    color: ${(props) => props.theme.purple};
+    margin-bottom: 3rem;
   }
 `
 
-export const SlideItem = styled.div`
-  margin-top: 3rem;
+export const Slider = styled.div``
 
-  h3 {
-    font-size: 2rem;
-    color: ${(props) => props.theme['gray-200']};
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: ${(props) => props.theme['gray-300']};
-    line-height: 1.6;
-  }
-`
-
-export const GridContainer = styled.div`
+export const SliderItem = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  position: relative;
+
+  div {
+    h3 {
+      font-size: 2rem;
+      color: ${(props) => props.theme['gray-200']};
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: ${(props) => props.theme['gray-300']};
+      line-height: 1.6;
+    }
+  }
 `
 export const ButtonsContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 145px 145px;
   gap: 1rem;
+
   position: absolute;
   bottom: 0;
+
   button {
-    all: unset;
+    font-family: unset;
+    height: 43px;
+    padding: 11px 38px;
+    font-weight: 700;
+    line-height: 1.6;
+    font-size: 0.75rem;
+    border: 1px solid ${(props) => props.theme.purple};
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
   }
 
   button:first-child {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 11px 38px;
-    font-weight: 700;
-    line-height: 1.6;
-
-    background: ${(props) => props.theme.ter};
+    background: ${(props) => props.theme.purple};
     color: ${(props) => props.theme.white};
-    font-size: 0.75rem;
-    border: 1px solid ${(props) => props.theme.ter};
-    letter-spacing: 0.0125rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-    font-family: 'Manrope';
   }
-  button:last-child {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 11px 38px;
-    font-weight: 700;
-    line-height: 1.6;
 
+  button:last-child {
     color: ${(props) => props.theme.white};
-    font-size: 0.75rem;
-    border: 1px solid ${(props) => props.theme.ter};
-    letter-spacing: 0.0125rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-    font-family: 'Manrope';
+    background: none;
   }
 `

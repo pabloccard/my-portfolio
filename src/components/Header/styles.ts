@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const Container = styled.header`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  max-width: 1440px;
+  height: 5rem;
 
   margin: 0 auto;
-  max-width: 1120px;
-  padding: 0 1.5rem;
+
+  padding: 0 2.5rem;
 `
 
 export const NavBar = styled.nav`
@@ -16,10 +19,20 @@ export const NavBar = styled.nav`
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme['gray-300']};
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 0.0125rem;
+
+    transition: color ease 0.2s;
+
+    &:hover {
+      color: ${(props) => props.theme['gray-100']};
+    }
+  }
+
+  @media (max-width: 720px) {
+    display: none;
   }
 `
 
@@ -27,26 +40,31 @@ export const CurriculumButton = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 11px 38px;
   font-weight: 700;
-  line-height: 1.6;
 
-  color: ${(props) => props.theme.white};
-  font-size: 0.75rem;
-  border: 1px solid ${(props) => props.theme.ter};
+  color: ${(props) => props.theme['gray-300']};
+  font-size: 0.875rem;
+
   letter-spacing: 0.0125rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: box-shadow 0.3s;
-  font-family: 'Manrope';
+  transition: color 0.2s;
 
   &:hover {
-    -webkit-box-shadow: 0px 0px 10px 0px ${(props) => props.theme.secondary};
-    -moz-box-shadow: 0px 0px 10px 0px ${(props) => props.theme.secondary};
-    box-shadow: 0px 0px 10px 0px ${(props) => props.theme.secondary};
+    color: ${(props) => props.theme['gray-100']};
+
+    svg {
+      color: ${(props) => props.theme['gray-100']};
+    }
   }
 
   svg {
-    font-size: 1rem;
+    transition: inherit;
+    font-size: 1.25rem;
+    color: ${(props) => props.theme['gray-300']};
+  }
+
+  @media (max-width: 720px) {
+    display: none;
   }
 `

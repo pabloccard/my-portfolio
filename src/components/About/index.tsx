@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import manProgramming from '../../assets/man-programming.png'
 import { FiDownload } from 'react-icons/fi'
-import { AboutSession, Content, Container, Bio, Skills } from './styles'
+import { AboutSession, Content, Container, Bio } from './styles'
 
 export const About = () => {
   return (
@@ -23,18 +23,6 @@ export const About = () => {
               Quae velit, accusantium voluptatibus aspernatur eveniet
               laboriosam?
             </p>
-
-            <Skills>
-              <strong>Conhecimento em: </strong>
-              HTML, CSS, JavaScript, TypeScript, React JS, Git, Responsividade,
-              Testes unitários. <br />
-              <strong>Aprendendo: </strong>
-              Next JS, Accesibilidade.
-            </Skills>
-
-            <button>
-              BAIXAR CV <FiDownload />
-            </button>
           </Bio>
 
           <Image

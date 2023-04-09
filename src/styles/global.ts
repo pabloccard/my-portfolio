@@ -12,7 +12,11 @@ export const GlobalStyles = createGlobalStyle`
     body {
         -webkit-font-smoothing: antialiased;
         background-color: ${(props) => props.theme.black};
-        font-family: 'Manrope';
+        font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
     }
 `
 export const Wapper = styled.div`

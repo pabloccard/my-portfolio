@@ -1,7 +1,9 @@
 export const defaultTheme = {
   primary: '#8d74e5',
   secondary: '#FFB60C',
-  ter: 'hsla(258, 74%, 62%, 1)',
+  purple: '	#8156e6',
+  'purple-dark': '#6948b5',
+  'purple-light': '#9466ff',
 
   // 'gray-100': '#F2F2F2',
   'gray-200': '#D9D9D9',
