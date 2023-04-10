@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import manProgramming from '../../assets/man-programming.png'
-import { FiDownload } from 'react-icons/fi'
 import { AboutSession, Content, Container, Bio } from './styles'
 
 export const About = () => {

@@ -11,20 +11,12 @@ import {
 } from './styles'
 import frame from '../../assets/Frame1.png'
 import { projects } from '../../projectsData'
-import { useState } from 'react'
 
 export const Projects = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0)
-  const [loaded, setLoaded] = useState<boolean>(false)
-
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef] = useKeenSlider({
     initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-    created() {
-      setLoaded(true)
-    },
+    slideChanged(slider) {},
+    created() {},
   })
 
   return (
