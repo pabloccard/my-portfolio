@@ -24,11 +24,11 @@ export const About = () => {
             </p>
           </Bio>
 
-          <Image
+          {/* <Image
             src={manProgramming}
             height={380}
             alt="garoto mexendo em um computador"
-          />
+          /> */}
         </Content>
       </Container>
     </AboutSession>

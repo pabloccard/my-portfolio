@@ -7,24 +7,24 @@ import * as S from './styles'
 
 export const Banner = () => {
   return (
-    <S.BannerContainer>
-      <S.ContentContainer>
+    <S.Container>
+      <S.Content>
         <h2>Pablo Castilho</h2>
         <strong>
           desenvolvedor <span>front-end</span>
         </strong>
+      </S.Content>
 
-        <S.Links>
-          <S.Butao>
-            GitHub <FaGithub />
-          </S.Butao>
-          <S.Butao>
-            Baixar CV <FiDownload />
-          </S.Butao>
-        </S.Links>
-      </S.ContentContainer>
+      <Image src={laptop} alt="garoto mexendo em um computador" width={320} />
 
-      <Image src={laptop} width={476} alt="garoto mexendo em um computador" />
-    </S.BannerContainer>
+      <S.Actions>
+        <S.ActionButton>
+          GitHub <FaGithub />
+        </S.ActionButton>
+        <S.ActionButton>
+          Baixar CV <FiDownload />
+        </S.ActionButton>
+      </S.Actions>
+    </S.Container>
   )
 }
