@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import laptop from '../../assets/laptop.png'
-import { FiDownload } from 'react-icons/fi'
+import { HiDocumentDownload } from 'react-icons/hi'
 import { FaGithub } from 'react-icons/fa'
 
 import * as S from './styles'
@@ -22,7 +22,7 @@ export const Banner = () => {
           GitHub <FaGithub />
         </S.ActionButton>
         <S.ActionButton>
-          Baixar CV <FiDownload />
+          Baixar CV <HiDocumentDownload />
         </S.ActionButton>
       </S.Actions>
     </S.Container>

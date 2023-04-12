@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import manProgramming from '../../assets/man-programming.png'
+// import Image from 'next/image'
+// import manProgramming from '../../assets/man-programming.png'
 import { AboutSession, Content, Container, Bio } from './styles'
 
 export const About = () => {

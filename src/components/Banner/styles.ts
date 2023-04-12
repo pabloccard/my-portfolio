@@ -4,17 +4,16 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4.5rem;
 
   margin: 0 auto;
   max-width: 1120px;
 
-  padding: 4rem 2rem;
+  padding: 6.5rem 2rem;
 
   img {
     opacity: 0.8;
     transform: rotateY(180deg);
-
-    margin-top: 4rem;
   }
 `
 
@@ -45,18 +44,25 @@ export const ActionButton = styled.a`
   justify-content: center;
   gap: 0.5rem;
 
-  padding: 0.5rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 1.5rem;
-  background: ${(props) => props.theme.purple};
+  background: rgb(132, 89, 232);
+  background: linear-gradient(
+    90deg,
+    rgba(132, 89, 232, 1) 0%,
+    rgba(129, 86, 230, 1) 35%,
+    rgba(70, 46, 131, 1) 100%
+  );
+  /* background: ${(props) => props.theme.purple}; */
   color: ${(props) => props.theme.white};
   font-weight: 700;
   cursor: pointer;
 
   font-size: 0.75rem;
 
-  /* svg {
-    font-size: 1.25rem;
-  } */
+  svg {
+    font-size: 0.875rem;
+  }
 `
 
 export const Actions = styled.div`
@@ -64,10 +70,15 @@ export const Actions = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 
-  margin-top: 4rem;
-
   a:last-child {
-    background: ${(props) => props.theme['gray-500']};
+    /* background: ${(props) => props.theme['gray-500']}; */
+    background: rgb(48, 48, 54);
+    background: linear-gradient(
+      90deg,
+      rgba(48, 48, 54, 1) 0%,
+      rgba(41, 41, 46, 1) 35%,
+      rgba(30, 30, 33, 1) 100%
+    );
     color: ${(props) => props.theme.white};
   }
 `
