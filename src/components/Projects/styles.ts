@@ -8,15 +8,98 @@ export const Container = styled.div`
 export const Content = styled.section`
   margin: 0 auto;
   max-width: 1120px;
-  padding: 6rem 2rem;
+  padding: 6.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   > h3 {
     color: ${(props) => props.theme.purple};
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: ${(props) => props.theme['gray-100']};
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: ${(props) => props.theme['gray-300']};
+    margin-top: 1.5rem;
   }
 `
 
-export const Slider = styled.div``
+export const ProjectCard = styled.div`
+  min-width: 17.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  height: 150px;
+  background: ${(props) => props.theme['gray-500']};
+  border-radius: 6px;
+  /* border: 1px solid transparent; */
+
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
+
+  &.active {
+    /* border-color: ${(props) => props.theme['gray-300']}; */
+  }
+`
+
+export const Actions = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  margin-top: 1.5rem;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+
+    color: ${(props) => props.theme.white};
+    font-weight: 700;
+    cursor: pointer;
+
+    font-size: 0.75rem;
+
+    svg {
+      font-size: 0.875rem;
+    }
+  }
+
+  button:nth-child(1) {
+    background: rgb(132, 89, 232);
+    background: linear-gradient(
+      90deg,
+      rgba(132, 89, 232, 1) 0%,
+      rgba(129, 86, 230, 1) 35%,
+      rgba(70, 46, 131, 1) 100%
+    );
+  }
+
+  button:nth-child(2) {
+    background: rgb(48, 48, 54);
+    background: linear-gradient(
+      90deg,
+      rgba(48, 48, 54, 1) 0%,
+      rgba(41, 41, 46, 1) 35%,
+      rgba(30, 30, 33, 1) 100%
+    );
+  }
+`
+
+export const Slider = styled.div`
+  border-radius: 6px;
+`
 
 export const SliderItem = styled.div`
   display: grid;

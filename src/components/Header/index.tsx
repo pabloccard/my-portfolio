@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../../assets/logo9.png'
+import logo from '../../assets/logo.png'
 import { AiFillLinkedin } from 'react-icons/ai'
 
 import * as S from './styles'

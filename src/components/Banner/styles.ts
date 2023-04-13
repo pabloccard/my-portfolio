@@ -9,7 +9,7 @@ export const Container = styled.section`
   margin: 0 auto;
   max-width: 1120px;
 
-  padding: 6.5rem 2rem;
+  padding: 5rem 2rem;
 
   img {
     opacity: 0.8;

@@ -15,13 +15,13 @@ export const MenuButton = styled.button`
   background: none;
 
   svg {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: ${(props) => props.theme.purple};
   }
 `
 
 export const Menu = styled.div<StatusMenu>`
-  /* z-index: -100; */
+  z-index: 100;
 
   width: 100vw;
   height: 100vh;

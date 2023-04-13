@@ -9,7 +9,7 @@ export const AboutSession = styled.section`
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 1120px;
-  padding: 6rem 2rem;
+  padding: 6.5rem 2rem;
 
   h3 {
     color: ${(props) => props.theme.purple};

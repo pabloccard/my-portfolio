@@ -6,11 +6,10 @@ export const Container = styled.header`
   justify-content: space-between;
 
   max-width: 1440px;
-  height: 5rem;
 
   margin: 0 auto;
 
-  padding: 0 2.5rem;
+  padding: 1.5rem 2.5rem;
 `
 
 export const NavBar = styled.nav`
