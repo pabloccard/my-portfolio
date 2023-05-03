@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import logo from '../../assets/logo.png'
 import { AiFillLinkedin } from 'react-icons/ai'
 
 import * as S from './styles'
@@ -8,7 +6,7 @@ import { Menu } from '../Menu'
 export const Header = () => {
   return (
     <S.Container>
-      <Image src={logo} alt="logo" height={50} />
+      <strong>PC</strong>
 
       <S.NavBar>
         <a href="">Home</a>

@@ -10,6 +10,11 @@ export const Container = styled.header`
   margin: 0 auto;
 
   padding: 1.5rem 2.5rem;
+
+  strong {
+    color: ${(props) => props.theme['gray-200']};
+    font-size: 1.25rem;
+  }
 `
 
 export const NavBar = styled.nav`

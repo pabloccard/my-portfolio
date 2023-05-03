@@ -3,30 +3,39 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 
 import * as S from './styles'
+import coffe from '../../assets/coffe-delivery.png'
 
 import { FaGithub, FaExternalLinkSquareAlt } from 'react-icons/fa'
 import { useState } from 'react'
 
 const PROJECTS = [
   {
+    id: '01',
     title: 'Minhas Medicações',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt tempore non error ducimus tenetur iusto accusantium saepe minima esse sapiente enim ea corporis recusandae soluta facere, fugiat consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quam qui amet reiciendis est. Iste velit distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit, accusantium voluptatibus aspernatur eveniet laboriosam?',
+    img: coffe,
   },
   {
+    id: '02',
     title: 'Coffe Delivery',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt tempore non error ducimus tenetur iusto accusantium saepe minima esse sapiente enim ea corporis recusandae soluta facere, fugiat consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quam qui amet reiciendis est. Iste velit distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit, accusantium voluptatibus aspernatur eveniet laboriosam?',
+    img: coffe,
   },
   {
+    id: '03',
     title: 'Game News',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt tempore non error ducimus tenetur iusto accusantium saepe minima esse sapiente enim ea corporis recusandae soluta facere, fugiat consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quam qui amet reiciendis est. Iste velit distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit, accusantium voluptatibus aspernatur eveniet laboriosam?',
+    img: coffe,
   },
   {
+    id: '04',
     title: 'App do Montanha',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt tempore non error ducimus tenetur iusto accusantium saepe minima esse sapiente enim ea corporis recusandae soluta facere, fugiat consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quam qui amet reiciendis est. Iste velit distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit, accusantium voluptatibus aspernatur eveniet laboriosam?',
+    img: coffe,
   },
 ]
 
@@ -34,27 +43,39 @@ export const Projects = () => {
   const [currentProject, setCurrentProject] = useState(PROJECTS[0])
 
   const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
     slides: {
-      perView: 'auto',
+      perView: 1.2,
       spacing: 16,
     },
+    mode: 'free-snap',
+
     slideChanged() {
       const index = instanceRef.current?.track.details.abs
 
       if (index !== undefined) {
         setCurrentProject(PROJECTS[index])
       }
-      console.log(index)
     },
+
     breakpoints: {
       '(min-width: 1024px)': {
         slides: {
-          perView: 3,
-          spacing: 32,
+          perView: 2.2,
+          spacing: 16,
         },
       },
     },
   })
+
+  function handleClick(id: string) {
+    const index = PROJECTS.findIndex((el) => el.id === id)
+
+    if (index !== -1) {
+      instanceRef.current?.moveToIdx(index)
+      setCurrentProject(PROJECTS[index])
+    }
+  }
 
   return (
     <S.Container>
@@ -65,8 +86,14 @@ export const Projects = () => {
         <S.Slider ref={sliderRef} className="keen-slider">
           {PROJECTS.map((project) => (
             <S.ProjectCard
-              className="keen-slider__slide"
-              key={project.title}
+              onClick={() => handleClick(project.id)}
+              className={`keen-slider__slide ${
+                currentProject.id === project.id ? 'active' : ''
+              }`}
+              key={project.id}
+              src={project.img}
+              width={1920}
+              alt=""
             ></S.ProjectCard>
           ))}
         </S.Slider>

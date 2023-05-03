@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -32,20 +33,18 @@ export const Content = styled.section`
   }
 `
 
-export const ProjectCard = styled.div`
-  min-width: 17.5rem;
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
-  height: 150px;
-  background: ${(props) => props.theme['gray-500']};
-  border-radius: 6px;
-  /* border: 1px solid transparent; */
+export const ProjectCard = styled(Image)`
+  height: auto;
+  border-radius: 8px;
 
-  -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
-  -moz-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.44);
+  filter: brightness(25%);
+  transition: filter 0.2s;
+
+  z-index: 10000;
 
   &.active {
-    /* border-color: ${(props) => props.theme['gray-300']}; */
+    filter: brightness(100%);
+    /* border: 3px solid ${(props) => props.theme.purple}; */
   }
 `
 
