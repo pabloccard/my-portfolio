@@ -11,14 +11,14 @@ export const Content = styled.section`
   max-width: 1120px;
   padding: 6.5rem 2rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 
   > h3 {
     color: ${(props) => props.theme.purple};
     margin-bottom: 2rem;
     text-transform: uppercase;
+    /* text-align: center; */
   }
 
   h2 {
@@ -30,6 +30,7 @@ export const Content = styled.section`
   p {
     color: ${(props) => props.theme['gray-300']};
     margin-top: 1.5rem;
+    text-align: center;
   }
 `
 
@@ -95,12 +96,16 @@ export const Actions = styled.div`
 `
 
 export const Slider = styled.div`
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  /* padding-left: 2rem; */
+  margin-right: 2rem;
 `
 
 export const SliderContainer = styled.div`
-  width: 100vw !important;
-  margin-left: -2rem;
+  width: calc(100vw - 2rem) !important;
+  align-self: flex-start;
+  /* margin-left: 2rem; */
+  /* margin-right: 2rem; */
   /* padding-left: 2rem; */
 `
 

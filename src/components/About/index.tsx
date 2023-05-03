@@ -1,6 +1,8 @@
 // import Image from 'next/image'
 // import manProgramming from '../../assets/man-programming.png'
-import { AboutSession, Content, Container, Bio } from './styles'
+import Image from 'next/image'
+import { AboutSession, Content, Container, Bio, Avatar } from './styles'
+import jureg from '../../assets/jureg.jpg'
 
 export const About = () => {
   return (
@@ -8,6 +10,10 @@ export const About = () => {
       <Container>
         <h3>SOBRE MIM</h3>
         <Content>
+          <Avatar>
+            <Image src={jureg} height={100} alt="" />
+          </Avatar>
+
           <Bio>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
