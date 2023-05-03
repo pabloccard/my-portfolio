@@ -47,14 +47,23 @@ export const Projects = () => {
     slides: {
       perView: 1.2,
       spacing: 16,
+      origin: 'center',
     },
+    range: {
+      align: true,
+    },
+
     slideChanged() {
       const index = instanceRef.current?.track.details.abs
+      const relative = instanceRef.current?.track.absToRel(index || 0)
 
-      if (index !== undefined) {
-        setCurrentProject(PROJECTS[index])
+      if (relative !== undefined) {
+        setCurrentProject(PROJECTS[relative])
       }
     },
+
+    loop: true,
+
     breakpoints: {
       '(min-width: 1024px)': {
         slides: {

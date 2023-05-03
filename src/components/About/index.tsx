@@ -1,42 +1,36 @@
 // import Image from 'next/image'
 // import manProgramming from '../../assets/man-programming.png'
 import Image from 'next/image'
-import { AboutSession, Content, Container, Bio, Avatar } from './styles'
+import { AboutSession, Content } from './styles'
 import jureg from '../../assets/jureg.jpg'
 
 export const About = () => {
   return (
     <AboutSession>
-      <Container>
+      <Content>
         <h3>SOBRE MIM</h3>
-        <Content>
-          <Avatar>
-            <Image src={jureg} height={100} alt="" />
-          </Avatar>
 
-          <Bio>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
-              dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi
-              molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum
-              iure. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Quaerat sunt tempore non error ducimus tenetur iusto accusantium
-              saepe minima esse sapiente enim ea corporis recusandae soluta
-              facere, fugiat consequuntur deleniti! Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Magni quam qui amet reiciendis est.
-              Iste velit distinctio dolorum, nemo autem esse rerum cupiditate.
-              Quae velit, accusantium voluptatibus aspernatur eveniet
-              laboriosam?
-            </p>
-          </Bio>
+        <Image src={jureg} height={100} alt="" />
 
-          {/* <Image
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
+          dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi
+          molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt
+          tempore non error ducimus tenetur iusto accusantium saepe minima esse
+          sapiente enim ea corporis recusandae soluta facere, fugiat
+          consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Magni quam qui amet reiciendis est. Iste velit
+          distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit,
+          accusantium voluptatibus aspernatur eveniet laboriosam?
+        </p>
+
+        {/* <Image
             src={manProgramming}
             height={380}
             alt="garoto mexendo em um computador"
           /> */}
-        </Content>
-      </Container>
+      </Content>
     </AboutSession>
   )
 }

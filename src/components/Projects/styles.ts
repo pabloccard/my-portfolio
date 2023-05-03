@@ -16,9 +16,9 @@ export const Content = styled.section`
 
   > h3 {
     color: ${(props) => props.theme.purple};
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
-    /* text-align: center; */
+    font-size: 1.25rem;
   }
 
   h2 {
@@ -96,17 +96,19 @@ export const Actions = styled.div`
 `
 
 export const Slider = styled.div`
-  /* padding-left: 2rem; */
-  /* padding-left: 2rem; */
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+  overflow: visible !important;
 `
 
 export const SliderContainer = styled.div`
-  width: calc(100vw - 2rem) !important;
-  align-self: flex-start;
-  /* margin-left: 2rem; */
-  /* margin-right: 2rem; */
+  width: 100vw;
+  overflow: hidden;
   /* padding-left: 2rem; */
+  /* margin-left: -2rem; */
+  /* margin-right: 2rem; */
+
+  /* width: calc(100vw - 2rem) !important; */
+  /* align-self: flex-start; */
 `
 
 export const SliderItem = styled.div`

@@ -27,7 +27,7 @@ export const Content = styled.div`
   strong {
     display: block;
     color: ${(props) => props.theme['gray-200']};
-    font-size: 18px;
+    font-size: 1.25rem;
     letter-spacing: 0.0125rem;
     font-weight: bold;
     margin-top: -0.5rem;
