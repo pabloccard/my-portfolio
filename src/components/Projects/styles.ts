@@ -95,11 +95,13 @@ export const Actions = styled.div`
 `
 
 export const Slider = styled.div`
-  width: calc(100% + 4rem) !important;
-  margin-left: -2rem;
-  margin-right: -2rem;
   padding-left: 2rem;
-  padding-right: 2rem;
+`
+
+export const SliderContainer = styled.div`
+  width: 100vw !important;
+  margin-left: -2rem;
+  /* padding-left: 2rem; */
 `
 
 export const SliderItem = styled.div`

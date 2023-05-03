@@ -48,8 +48,6 @@ export const Projects = () => {
       perView: 1.2,
       spacing: 16,
     },
-    mode: 'free-snap',
-
     slideChanged() {
       const index = instanceRef.current?.track.details.abs
 
@@ -57,7 +55,6 @@ export const Projects = () => {
         setCurrentProject(PROJECTS[index])
       }
     },
-
     breakpoints: {
       '(min-width: 1024px)': {
         slides: {
@@ -83,20 +80,22 @@ export const Projects = () => {
         <h3>Projetos</h3>
         <h2>{currentProject.title}</h2>
 
-        <S.Slider ref={sliderRef} className="keen-slider">
-          {PROJECTS.map((project) => (
-            <S.ProjectCard
-              onClick={() => handleClick(project.id)}
-              className={`keen-slider__slide ${
-                project.id === currentProject.id ? 'active' : ''
-              }`}
-              key={project.id}
-              src={project.img}
-              width={1920}
-              alt=""
-            ></S.ProjectCard>
-          ))}
-        </S.Slider>
+        <S.SliderContainer>
+          <S.Slider ref={sliderRef} className="keen-slider">
+            {PROJECTS.map((project) => (
+              <S.ProjectCard
+                onClick={() => handleClick(project.id)}
+                className={`keen-slider__slide ${
+                  project.id === currentProject.id ? 'active' : ''
+                }`}
+                key={project.id}
+                src={project.img}
+                width={1920}
+                alt=""
+              ></S.ProjectCard>
+            ))}
+          </S.Slider>
+        </S.SliderContainer>
 
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
