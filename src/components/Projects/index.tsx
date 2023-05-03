@@ -88,7 +88,7 @@ export const Projects = () => {
             <S.ProjectCard
               onClick={() => handleClick(project.id)}
               className={`keen-slider__slide ${
-                currentProject.id === project.id ? 'active' : ''
+                project.id === currentProject.id ? 'active' : ''
               }`}
               key={project.id}
               src={project.img}

@@ -40,8 +40,6 @@ export const ProjectCard = styled(Image)`
   filter: brightness(25%);
   transition: filter 0.2s;
 
-  z-index: 10000;
-
   &.active {
     filter: brightness(100%);
     /* border: 3px solid ${(props) => props.theme.purple}; */
@@ -97,7 +95,11 @@ export const Actions = styled.div`
 `
 
 export const Slider = styled.div`
-  border-radius: 6px;
+  width: calc(100% + 4rem) !important;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 `
 
 export const SliderItem = styled.div`
