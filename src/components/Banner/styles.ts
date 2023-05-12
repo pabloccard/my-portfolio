@@ -12,8 +12,28 @@ export const Container = styled.section`
   padding: 5rem 2rem;
 
   img {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: rotateY(180deg);
+  }
+`
+
+export const Blur = styled.div`
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    filter: blur(75px);
+
+    background: ${(props) => props.theme.purple};
   }
 `
 

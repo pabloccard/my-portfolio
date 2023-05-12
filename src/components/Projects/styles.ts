@@ -11,7 +11,7 @@ export const Content = styled.section`
   max-width: 1120px;
   padding: 6.5rem 2rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
   > h3 {
@@ -30,7 +30,7 @@ export const Content = styled.section`
   p {
     color: ${(props) => props.theme['gray-300']};
     margin-top: 1.5rem;
-    text-align: center;
+    /* text-align: center; */
   }
 `
 
@@ -103,8 +103,8 @@ export const Slider = styled.div`
 export const SliderContainer = styled.div`
   width: 100vw;
   overflow: hidden;
-  /* padding-left: 2rem; */
-  /* margin-left: -2rem; */
+  padding-left: 2rem;
+  margin-left: -2rem;
   /* margin-right: 2rem; */
 
   /* width: calc(100vw - 2rem) !important; */

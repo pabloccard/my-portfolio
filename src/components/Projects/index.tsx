@@ -45,9 +45,9 @@ export const Projects = () => {
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slides: {
-      perView: 1.2,
+      perView: 1.4,
       spacing: 16,
-      origin: 'center',
+      // origin: 'center',
     },
     range: {
       align: true,

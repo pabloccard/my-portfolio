@@ -15,7 +15,9 @@ export const Banner = () => {
         </strong>
       </S.Content>
 
-      <Image src={laptop} alt="garoto mexendo em um computador" width={320} />
+      <S.Blur>
+        <Image src={laptop} alt="garoto mexendo em um computador" width={320} />
+      </S.Blur>
 
       <S.Actions>
         <S.ActionButton>

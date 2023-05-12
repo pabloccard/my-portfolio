@@ -13,6 +13,21 @@ export const Container = styled.div`
 export const MenuButton = styled.button`
   line-height: 0;
   background: none;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    background: ${(props) => props.theme.purple};
+    filter: blur(0.75rem);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+  }
 
   svg {
     font-size: 2.2rem;

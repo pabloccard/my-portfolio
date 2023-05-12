@@ -11,30 +11,28 @@ export const Content = styled.section`
   max-width: 1120px;
   padding: 6.5rem 2rem;
 
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: center;
   flex-direction: column;
 
   h3 {
     color: ${(props) => props.theme.purple};
-    text-align: center;
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
   }
 
   img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 0.5rem;
 
     border-radius: 50%;
-    border: 3px solid ${(props) => props.theme['gray-500']};
+    border: 4px solid ${(props) => props.theme['gray-500']};
+    float: left;
   }
 
   p {
     color: ${(props) => props.theme['gray-300']};
     line-height: 1.6;
-    text-align: center;
   }
 `
