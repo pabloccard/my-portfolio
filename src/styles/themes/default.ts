@@ -1,5 +1,7 @@
 export const defaultTheme = {
-  primary: '#8d74e5',
+  primary: '#6C55E0',
+  bg: '#FBFBFE',
+
   secondary: '#FFB60C',
   purple: '	#8156e6',
   'purple-dark': '#6948b5',

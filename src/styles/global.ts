@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         -webkit-font-smoothing: antialiased;
-        background-color: ${(props) => props.theme.black};
+        background-color: ${(props) => props.theme.bg};
         font-family: 'Poppins', sans-serif;
     }
 

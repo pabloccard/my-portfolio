@@ -26,7 +26,7 @@ export const Content = styled.section`
     height: 4.5rem;
     margin-right: 0.5rem;
 
-    border-radius: 50%;
+    border-radius: 8px;
     border: 4px solid ${(props) => props.theme['gray-500']};
     float: left;
   }
