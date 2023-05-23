@@ -2,6 +2,7 @@ import Image from 'next/image'
 import * as S from './styles'
 import { TbBrandLinkedin, TbBrandWhatsapp, TbBrandGithub } from 'react-icons/tb'
 import { HiChevronRight } from 'react-icons/hi'
+import { Button } from '../Button'
 
 export const Hero = () => {
   return (
@@ -19,7 +20,7 @@ export const Hero = () => {
       </S.SocialBar>
 
       <S.Content>
-        <Image src="/profile-pic.png" alt="" width={320} height={320} />
+        <Image src="/profile.png" alt="" width={280} height={280} />
 
         <S.TextContent>
           <h1>Olá, eu sou Pablo</h1>
@@ -30,9 +31,9 @@ export const Hero = () => {
             ratione aperiam adipisci alias ipsum sit reiciendis eius harum.
           </p>
 
-          <button>
+          <Button>
             Fale comigo <HiChevronRight />
-          </button>
+          </Button>
         </S.TextContent>
       </S.Content>
     </S.Container>

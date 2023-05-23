@@ -1,38 +1,53 @@
 import styled from 'styled-components'
 
-export const AboutSession = styled.section`
-  margin: auto;
-  background: ${(props) => props.theme['gray-900']};
-  border-top: 3px solid ${(props) => props.theme['gray-500']};
+export const Container = styled.section`
+  padding-block: 5rem;
+  margin: 0 auto;
+
+  @media (min-width: 610px) {
+    padding-inline: 3.25rem;
+    padding-block: 8rem;
+  }
 `
 
-export const Content = styled.section`
+export const Content = styled.div`
+  max-width: calc(768px + 3.25rem);
   margin: 0 auto;
-  max-width: 1120px;
-  padding: 6.5rem 2rem;
+  padding-block: 3rem;
 
-  /* display: flex; */
-  justify-content: space-between;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 
-  h3 {
-    color: ${(props) => props.theme.purple};
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    /* align-items: flex-start; */
   }
 
   img {
-    width: 4.5rem;
-    height: 4.5rem;
-    margin-right: 0.5rem;
-
-    border-radius: 8px;
-    border: 4px solid ${(props) => props.theme['gray-500']};
-    float: left;
+    -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
   }
+`
+
+export const Data = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   p {
+    text-align: center;
     color: ${(props) => props.theme['gray-300']};
-    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+
+    p {
+      text-align: left;
+    }
   }
 `

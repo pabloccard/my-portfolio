@@ -5,7 +5,7 @@ export const Container = styled.section`
   position: relative;
 
   @media (min-width: 610px) {
-    padding-left: 3.25rem;
+    padding-inline: 3.25rem;
   }
 `
 
@@ -28,21 +28,20 @@ export const SocialBar = styled.div`
   @media (min-width: 610px) {
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
   }
 `
 
 export const Content = styled.div`
-  max-width: 980px;
+  max-width: calc(768px + 3.25rem);
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
-  gap: max(2rem, min(6rem, 10%));
+  gap: 2rem;
 
   img {
-    width: max(180px, min(320px, 33vw));
-    height: max(180px, min(320px, 33vw));
+    width: max(180px, min(280px, 33vw));
+    height: max(180px, min(280px, 33vw));
     margin-left: 3.25rem;
   }
 
@@ -70,20 +69,5 @@ export const TextContent = styled.div`
   p {
     color: ${(props) => props.theme['gray-300']};
     margin-top: 0.75rem;
-  }
-
-  button {
-    padding: 1rem;
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.white};
-    font-weight: bold;
-    border-radius: 8px;
-    margin-top: 1.25rem;
-    display: flex;
-    gap: 0.5rem;
-
-    svg {
-      font-size: 1.25rem;
-    }
   }
 `

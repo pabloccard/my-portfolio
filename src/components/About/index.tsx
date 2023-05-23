@@ -1,36 +1,34 @@
 // import Image from 'next/image'
 // import manProgramming from '../../assets/man-programming.png'
+
 import Image from 'next/image'
-import { AboutSession, Content } from './styles'
-import jureg from '../../assets/jureg.jpg'
+import * as S from './styles'
+import { TbFileDownload } from 'react-icons/tb'
+import { SectionTitle } from '../SectionTitle'
+import { Button } from '../Button'
 
 export const About = () => {
   return (
-    <AboutSession>
-      <Content>
-        <h3>SOBRE MIM</h3>
+    <S.Container>
+      <SectionTitle title="Sobre Mim" subtitle="Minha introdução" />
+      <S.Content>
+        <Image src="/image.jpeg" width={280} height={210} alt="" />
 
-        <Image src={jureg} height={100} alt="" />
+        <S.Data>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+            tempore sequi rerum doloribus facere dolor cupiditate facilis
+            deserunt rem? Optio, sint. Eos enim doloremque optio laudantium
+            placeat? Voluptatibus, blanditiis minima? Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Sit ducimus hic inventore sint
+            architecto excepturi et,
+          </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur,
-          dolor quae! Vel id sunt vitae fugit sint illo veritatis aut animi
-          molestiae! Modi, officiis voluptatibus dolores nemo ipsam earum iure.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt
-          tempore non error ducimus tenetur iusto accusantium saepe minima esse
-          sapiente enim ea corporis recusandae soluta facere, fugiat
-          consequuntur deleniti! Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Magni quam qui amet reiciendis est. Iste velit
-          distinctio dolorum, nemo autem esse rerum cupiditate. Quae velit,
-          accusantium voluptatibus aspernatur eveniet laboriosam?
-        </p>
-
-        {/* <Image
-            src={manProgramming}
-            height={380}
-            alt="garoto mexendo em um computador"
-          /> */}
-      </Content>
-    </AboutSession>
+          <Button>
+            Baixar CV <TbFileDownload />
+          </Button>
+        </S.Data>
+      </S.Content>
+    </S.Container>
   )
 }
