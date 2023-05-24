@@ -22,13 +22,13 @@ export const Content = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    /* align-items: flex-start; */
   }
 
   img {
     -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
   }
 `
 
