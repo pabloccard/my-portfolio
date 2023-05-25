@@ -3,6 +3,7 @@ import { About } from '@/components/About'
 // import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { Projects } from '@/components/Projects'
+import { Techs } from '@/components/Techs'
 // import { Projects } from '@/components/Projects'
 import { HomeContainer } from '@/styles/home'
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Projects /> */}
       <Hero />
       <About />
+      <Techs />
       <Projects />
     </HomeContainer>
   )
