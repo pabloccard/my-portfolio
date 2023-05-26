@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
   padding-block: 4rem;
   margin: 0 auto;
+  border-bottom: 1px solid ${(props) => props.theme['gray-300']};
 
   @media (min-width: 610px) {
     padding-inline: 3.25rem;

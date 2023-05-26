@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding-inline: 1rem;
+  padding: 0 2rem 2rem;
 
   @media (min-width: 768px) {
     display: grid;
