@@ -1,19 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  padding-block: 5rem;
+  padding-block: 4rem;
   margin: 0 auto;
 
   @media (min-width: 610px) {
     padding-inline: 3.25rem;
-    padding-block: 8rem;
   }
 `
 
 export const Content = styled.div`
   max-width: calc(768px + 3.25rem);
   margin: 0 auto;
-  padding-block: 3rem;
 
   display: flex;
   flex-direction: column;

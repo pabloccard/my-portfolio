@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.section`
   margin: 0 auto;
   position: relative;
+  padding-block: 8rem;
 
   @media (min-width: 610px) {
     padding-inline: 3.25rem;

@@ -1,24 +1,21 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  border-top: solid 1px ${(props) => props.theme['gray-200']};
-  padding-block: 5rem;
+  padding-block: 4rem;
   margin: 0 auto;
 
   @media (min-width: 610px) {
     padding-inline: 3.25rem;
-    padding-block: 8rem;
   }
 `
 export const Content = styled.div`
   max-width: calc(768px + 3.25rem);
   margin: 0 auto;
-  padding-block: 3rem;
 
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 `

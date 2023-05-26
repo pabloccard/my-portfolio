@@ -6,6 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
+  margin-bottom: 3.75rem;
+
   h2 {
     color: ${(props) => props.theme['gray-400']};
     font-size: max(20px, min(32px, 4.5vw));
