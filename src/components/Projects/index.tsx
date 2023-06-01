@@ -67,25 +67,26 @@ export const Projects = () => {
 
   return (
     <S.Container>
-      <SectionTitle title="Projetos" subtitle="Projetos recentes" />
-
-      <S.SliderContainer>
-        <button onClick={handlePrev}>
-          <AiOutlineLeft />
-        </button>
-        <div ref={sliderRef} className="keen-slider">
-          {PROJECTS.map((project) => (
-            <Project
-              className="keen-slider__slide"
-              key={project.id}
-              {...project}
-            ></Project>
-          ))}
-        </div>
-        <button onClick={handleNext}>
-          <AiOutlineRight />
-        </button>
-      </S.SliderContainer>
+      <S.Wrapper>
+        <SectionTitle title="Projetos" subtitle="Projetos recentes" />
+        <S.Content>
+          <button onClick={handlePrev}>
+            <AiOutlineLeft />
+          </button>
+          <div ref={sliderRef} className="keen-slider">
+            {PROJECTS.map((project) => (
+              <Project
+                className="keen-slider__slide"
+                key={project.id}
+                {...project}
+              ></Project>
+            ))}
+          </div>
+          <button onClick={handleNext}>
+            <AiOutlineRight />
+          </button>
+        </S.Content>
+      </S.Wrapper>
     </S.Container>
   )
 }

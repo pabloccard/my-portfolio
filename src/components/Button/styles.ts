@@ -7,7 +7,6 @@ export const Container = styled.button`
   color: ${(props) => props.theme.white};
   font-weight: bold;
   border-radius: 8px;
-  margin-top: 1.25rem;
   display: flex;
   gap: 0.5rem;
   font-size: 0.875rem;

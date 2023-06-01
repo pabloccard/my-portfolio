@@ -1,5 +1,7 @@
 export const defaultTheme = {
   primary: '#6C55E0',
+  'primary-section': '#121214',
+  'secondary-section': '#171719',
   bg: '#FBFBFE',
 
   secondary: '#FFB60C',

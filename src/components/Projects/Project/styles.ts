@@ -1,17 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 0 2rem 2rem;
+  padding: 0 1rem 1rem;
 
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  @media (min-width: 1024px) {
     gap: 2rem;
+    align-items: center;
   }
 
   img {
@@ -39,6 +35,7 @@ export const Container = styled.div`
 
 export const Data = styled.div`
   margin-top: 2rem;
+
   @media (min-width: 768px) {
     margin-top: 0;
   }

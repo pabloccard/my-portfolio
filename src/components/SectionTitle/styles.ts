@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin-bottom: 3.75rem;
 
   h2 {
-    color: ${(props) => props.theme['gray-400']};
+    color: ${(props) => props.theme.white};
     font-size: max(20px, min(32px, 4.5vw));
   }
 

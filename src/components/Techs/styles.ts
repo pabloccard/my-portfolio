@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-  padding-block: 4rem;
-  margin: 0 auto;
-  border-bottom: 1px solid ${(props) => props.theme['gray-300']};
+  background: ${(props) => props.theme['primary-section']};
+`
 
-  @media (min-width: 610px) {
-    padding-inline: 3.25rem;
+export const Wrapper = styled.div`
+  max-width: 450px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 832px;
   }
 `
-export const Content = styled.div`
-  max-width: calc(768px + 3.25rem);
-  margin: 0 auto;
 
+export const Content = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
