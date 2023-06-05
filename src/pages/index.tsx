@@ -1,9 +1,9 @@
-import { About } from '@/components/About'
-import { Contact } from '@/components/Contact'
-import { Footer } from '@/components/Footer'
-import { Hero } from '@/components/Hero'
-import { Projects } from '@/components/Projects'
-import { Techs } from '@/components/Techs'
+import { About } from '@/components/about-section'
+import { Contact } from '@/components/contact-section'
+import { Footer } from '@/components/footer-section'
+import { Hero } from '@/components/hero-section'
+import { Projects } from '@/components/projects-section'
+import { Techs } from '@/components/techs-section'
 import { HomeContainer } from '@/styles/home'
 
 export default function Home() {

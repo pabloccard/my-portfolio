@@ -1,13 +1,12 @@
 export const defaultTheme = {
   primary: '#6C55E0',
-  'primary-section': '#121214',
-  'secondary-section': '#171719',
+  'primary-section': '#fcfcfc',
+  'secondary-section': '#f9f9f9',
   bg: '#FBFBFE',
 
-  secondary: '#FFB60C',
-  purple: '	#8156e6',
-  'purple-dark': '#6948b5',
-  'purple-light': '#9466ff',
+  content: '#808080',
+  title: '#29292e',
+  subtitle: '#3f3f3f',
 
   // 'gray-100': '#F2F2F2',
   'gray-200': '#D9D9D9',
