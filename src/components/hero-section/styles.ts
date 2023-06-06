@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Container = styled.section`
@@ -8,14 +9,9 @@ export const RowContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 3.5rem;
-
-  > svg {
-    transform: rotateX(180deg);
-    width: max(180px, min(250px, 30vw));
-  }
 `
 
-export const SocialBar = styled.div`
+export const SocialBar = styled(motion.div)`
   display: grid;
   grid-gap: 0.5rem;
 
@@ -40,7 +36,7 @@ export const SocialBar = styled.div`
   }
 `
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -64,7 +60,14 @@ export const Content = styled.div`
   }
 `
 
-export const TextContent = styled.div`
+export const ImageContainer = styled(motion.div)`
+  > svg {
+    transform: rotateX(180deg);
+    width: max(180px, min(250px, 30vw));
+  }
+`
+
+export const Data = styled(motion.div)`
   h1 {
     color: ${(props) => props.theme.title};
     font-size: max(28px, min(48px, 4.5vw));

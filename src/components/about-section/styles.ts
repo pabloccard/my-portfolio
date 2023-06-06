@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 export const Container = styled.section`
@@ -5,14 +6,18 @@ export const Container = styled.section`
 `
 
 export const Content = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2rem; */
+
+  display: grid;
+  grid-template-columns: 100%;
   gap: 2rem;
   margin-top: 3.75rem;
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    grid-template-columns: auto auto;
   }
 
   img {
@@ -25,7 +30,7 @@ export const Content = styled.div`
   }
 `
 
-export const Data = styled.div`
+export const Data = styled(motion.div)`
   p {
     color: ${(props) => props.theme['gray-300']};
     margin-bottom: 1.25rem;

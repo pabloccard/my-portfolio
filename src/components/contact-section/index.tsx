@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Button } from '../button'
 import { SectionTitle } from '../section-title'
 import { Wrapper } from '../section-wrapper'
@@ -29,14 +30,34 @@ export const Contact = () => {
           </S.InfoList>
 
           <S.Form>
-            <input type="text" placeholder="nome" />
-            <input type="email" name="" id="" placeholder="email" />
-            <textarea
+            <motion.input
+              type="text"
+              placeholder="nome"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.2 }}
+            />
+            <motion.input
+              type="email"
+              name=""
+              id=""
+              placeholder="email"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.2, delay: 0.2 }}
+            />
+            <motion.textarea
               cols={30}
               rows={5}
               placeholder="mensagem..."
               maxLength={500}
-            ></textarea>
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.2, delay: 0.3 }}
+            ></motion.textarea>
 
             <Button>
               Enviar Mensagem <TbSend />
