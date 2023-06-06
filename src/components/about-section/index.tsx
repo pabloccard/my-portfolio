@@ -3,9 +3,9 @@
 
 import Image from 'next/image'
 import * as S from './styles'
-import { TbFileDownload } from 'react-icons/tb'
+// import { TbFileDownload } from 'react-icons/tb'
 import { SectionTitle } from '../section-title'
-import { Button } from '../button'
+// import { Button } from '../button'
 import { Wrapper } from '../section-wrapper'
 import { motion } from 'framer-motion'
 
@@ -39,9 +39,9 @@ export const About = () => {
               architecto excepturi et,
             </p>
 
-            <Button>
+            {/* <Button>
               Baixar CV <TbFileDownload />
-            </Button>
+            </Button> */}
           </S.Data>
         </S.Content>
       </Wrapper>
